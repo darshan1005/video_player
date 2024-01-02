@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <video src="30-Seconds-status-videos-17.mp4"></video>
+    
+        <div class="settings">
+            <div class="progress-area">
+                <div class="progress-bar"></div>
+            </div>
+    
+            <div class="volume-box">
+                <!-- <i class="material-icons volume vol-up">volume_up</i> -->
+                <input type="range" min="0" step="0.1" max="1">
+            </div>
+    
+           <div class="time-and-btns">
+                <span class="current-time">0:00:00</span>
+                <i class="material-icons fast-rewind">fast_rewind</i>
+                <div class="play-pause-btn play">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+                <i class="material-icons fast-forward">fast_forward</i>
+                <span class="total-time">0:00:00</span>
+           </div>
+    
+            <div class="others">
+                <i class="material-icons setting">settings</i>
+                <div><span>HD</span></div>
+                <i class="material-icons full-screen">fullscreen</i>
+            </div>
+    
+            <div class="playback-speed">
+                <li onclick="changeSpeed('0.25')">0.25x</li>
+                <li onclick="changeSpeed('0.5')">0.5x</li>
+                <li onclick="changeSpeed('0.75')">0.75x</li>
+                <li onclick="changeSpeed('1')">Normal</li>
+                <li onclick="changeSpeed('1.25')">1.25x</li>
+                <li onclick="changeSpeed('1.5')">1.5x</li>
+                <li onclick="changeSpeed('1.75')">1.75x</li>
+                <li onclick="changeSpeed('2')">2x</li>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

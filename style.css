@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display-swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 500px;
+    width: 870px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.container .settings {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all .5s;
+    pointer-events: auto;
+}
+
+.container .settings.settingBox-hide-show {
+    opacity: 0;
+    transition: all .5s;
+    pointer-events: none;
+}
+
+.container .settings .progress-area {
+    height: 3px;
+    width: 95%;
+    position: absolute;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.container .settings .progress-area .progress-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    background: #6495ED;
+    cursor: pointer;
+}
+
+.container .volume-box {
+    height: 40px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+}
+
+/* .container .volume-box i {
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+} */
+
+.container .volume-box input {
+    all: unset;
+    height: 5px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.container .volume-box input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background: #64cded;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.container .time-and-btns {
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    left: 51.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .settings .time-and-btns i {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.container .settings .time-and-btns span {
+    font-size: 10px;
+}
+
+.container .settings .time-and-btns .play-pause-btn {
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+.container .settings .time-and-btns .play-pause-btn i {
+    font-size: 24px;
+}
+
+.container .settings .time-and-btns .fast-rewind {
+    margin-left: -8px;
+    cursor: pointer;
+}
+
+.container .settings .time-and-btns .fast-forward {
+    margin-left: 33px;
+    cursor: pointer;
+}
+
+.container .settings .time-and-btns .current-time {
+    position: relative;
+    left: -10px;
+}
+
+.container .settings .time-and-btns .total-time {
+    position: relative;
+    left: 5px;
+}
+
+.container .others {
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container .settings .others i:nth-child(1) {
+    position: relative;
+    left: 19px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: -3px;
+}
+
+.container .settings .others i:nth-child(3) {
+    margin-left: 27px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+.container .settings .others div {
+    height: 16px;
+    width: 23px;
+    background: #26A4F8;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 700;
+    position: relative;
+    left: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container .playback-speed {
+    height: 90px;
+    width: 60px;
+    background: white;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 17px;
+    right: 65px;
+    font-size: 16px;
+    transform-origin: bottom right;
+    transition: all .2s;
+    padding: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    transform: scale(0);
+    z-index: 1;
+}
+
+.container .playback-speed::-webkit-scrollbar {
+    display: none;
+}
+
+.container .playback-speed.show {
+    transform: scale(1);
+}
+
+.container .playback-speed li {
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.container.fullscreen {
+    height: 100%;
+    width: 100%;
+}
+
+.container video.fullscreen {
+    object-fit: contain;
+}
